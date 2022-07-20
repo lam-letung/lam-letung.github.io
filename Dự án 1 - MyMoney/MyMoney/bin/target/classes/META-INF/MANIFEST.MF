@@ -1,0 +1,7 @@
+Manifest-Version: 1.0
+Build-Jdk-Spec: 17
+Class-Path: libs/AbsoluteLayout-RELEASE125.jar libs/mssql-jdbc-9.5.0.jre
+ 11-preview.jar libs/jfreechart-1.5.3.jar libs/jcommon-1.0.24.jar
+Main-Class: com.mymoney.ui.MainForm
+Created-By: Maven Integration for Eclipse
+
