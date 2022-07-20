@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+
+<head></head>
+
+<body>
+    <div th:fragment="nav">
+        
+          
+            <nav class="navbar navbar-expand-lg bg-light">
+                <div class="container-fluid">
+                    <a class="navbar-brand border rounded-circle bg-black nav-logo shadow" th:href="@{/index}">
+                        <i class="fab fa-studiovinari fs-1 fc-white nav-logo--icon"></i>
+                    </a>
+                    <h1 class="mb-1">War Shop</h1>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse  ms-5" id="navbarSupportedContent">
+                        <ul class="navbar-nav  m-1 mb-lg-0 ">
+                            <!-- <li class="nav-item">
+                                <a class="nav-link fw-bolder" aria-current="page" th:href="@{/admin/accounts}">Manage
+                                    Account</a>
+                            </li>
+                            <li class="nav-item" >
+                                <a class="nav-link fw-bolder" aria-current="page" th:href="@{/admin/customer}">Manage
+                                    Customer</a>
+                            </li>
+                            <li class="nav-item" >
+                                <a class="nav-link fw-bolder" aria-current="page"
+                                    th:href="@{/admin/categories/searchpaginated}">Manage Category</a>
+                            </li>
+                            <li class="nav-item" >
+                                <a class="nav-link fw-bolder" th:href="@{/admin/products/searchpaginated}">Manage
+                                    Product</a>
+                            </li> -->
+                            <li class="nav-item ">
+                                <a class="nav-link fw-bolder" href="#">Manage Order</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link fw-bolder" href="#">Manage Profile</a>
+                            </li>
+                            <li class="nav-link-user nav-item dropdown" ng-controller="studentController">
+                                <a class="nav-link  fw-bolder dropdown-toggle" href="#" id="navbarDropdown"
+                                    role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Tài khoản
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            
+               
+
+                                    <li><a class="dropdown-item" th:href="@{/logout}">Logout</a>
+                                    </li>
+                                    <li><a class="dropdown-item" data-bs-toggle="modal" ng-show="isLogin()"
+                                            data-bs-target="#editPassModal" href="#">Change Password</a></li>
+                                    <li><a class="dropdown-item" ng-show="isLogin()" href="#!/edit-profile">Manage
+                                            Profile</a>
+                                    </li>
+                                    <li><a class="dropdown-item" ng-show="isLogin()" href="#!/user-profile">Profile</a>
+                                    </li>
+
+                                </ul>
+
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link fw-bolder nav-item_icon p-auto  " data-bs-toggle="modal"
+                                    data-bs-target="#categoryModal" href="#"><i class="fa fa-cart-plus fs-3 "
+                                        aria-hidden="true"></i></a>
+                            </li>
+                        </ul>
+                        <form class="d-flex" role="search">
+                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                            <button class="btn btn-outline-success" type="submit">Search</button>
+                        </form>
+                    </div>
+                </div>
+            </nav>
+     
+    </div>
+</body>
+
+</html>

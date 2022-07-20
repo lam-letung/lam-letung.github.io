@@ -1,0 +1,239 @@
+body{
+    margin: 0 auto;
+    padding: 0px;
+    width: 2000px;
+    height: 3500px;
+    
+    min-width: 1000px;
+    background-image: url(http://thptleloi.quangtri.edu.vn/upload/21541/20201115/breadcrumbs-bg-1_0492016d0_4edc8a7006.jpg) ;
+}
+.logo{
+    background-color:cadetblue;
+    width: 100%;
+    height: 60px;
+}
+
+.t1-trai>a{
+    color: white;
+    text-decoration: none;
+}
+.t1-trai>img{
+    width: 30px;
+}
+
+.logo .t1-trai{
+    margin: 10px 10px 20px 20px;
+    float: left;
+    
+    
+}
+.timkiem{
+  float: right;
+  margin: 15px 15px 20px 20px;
+    min-width: 20%;
+    height: 25px;
+}
+.timkiem-logo{
+    float: right;
+      width: 30px;
+      padding-top: 15px;
+     
+}
+.logo-truong{
+    max-width: 2400px;
+    margin: 0 auto;
+  
+ 
+}
+.logo-truong>img{
+    width: 100%;
+}
+
+.hmenu{
+    margin: 0px auto;
+    padding: 0px;
+    border-radius: 5px;
+    background-color: cadetblue;
+    list-style: none;
+    width: 100%;
+    height: 70px;
+    max-width: 2400px;
+}
+.hmenu>li>a>img{
+    width: 40px;
+    margin-bottom: -12px;
+    
+}
+ul.hmenu{
+    float: left;
+    position: relative;
+}
+ul.hmenu>li{  
+    float: left;
+    
+    position: relative;
+}
+.hmenu>li>a{  
+    text-decoration: none;
+    color: white;
+    display: block;
+    line-height: 80px;
+    font-size: 30px;
+    margin: 0 auto;
+    font-variant: small-caps;
+    padding: 0 25px;
+
+}
+ul.hmenu>li>a:hover{
+    background:white;
+    color: black;
+    font-weight: bolder;
+    
+ 
+}
+ul.hmenu>li>a:focus{
+    background:white;
+    color: red;
+    font-weight: bolder;
+    
+ 
+}
+ul.hmenu>li:hover>.menu-con-gioi-thieu{
+    display: block;
+}
+ul.menu-con-gioi-thieu{
+    margin: 0px;
+    padding: 0px;
+    border-radius: 5px;
+    list-style: none;
+    width: auto;
+    position: absolute;
+    display: none;
+ 
+}
+ul.menu-con-gioi-thieu>li>a{
+    display: block;
+    line-height: 30px;
+    text-decoration: none;
+    font-variant: small-caps;
+    padding: 0 25px;
+    
+
+    background-color:cadetblue ;
+    color:black;
+ ;
+}
+ul.menu-con-gioi-thieu>li>a:hover{
+    background-color: white;
+    color: black;
+    font-weight: bolder;
+    border-left: 4px solid cadetblue;
+
+;
+}
+ul.menu-con-gioi-thieu>li>a:focus{
+    background:white;
+    color: red;
+    font-weight: bolder;
+    
+ 
+}
+.menucon{
+  top: -30px;
+    float: left;
+    width: 30%;
+    height: 100%;
+    position: relative;
+}
+.tndl-form{
+    top: 100px;
+    position: relative;
+}
+table{
+    width: 100%;
+    border-radius: 5px;
+    border-color: cadetblue;
+}
+#caption{
+    background-color: cadetblue ;
+    padding: 30px;
+    font-size: 30px;
+    border-radius: 10px;
+    color: white;
+}
+td{
+    padding: 30px;
+    font-size: 30px;
+}
+
+.gioithieu-form{
+    top: -30px;
+    width: 70%;
+    float: left;
+    height: 100%;
+    position: relative;
+}
+tr:nth-child(2n){
+    background-color: rgb(224, 241, 241);
+}
+.tva-form{
+    top: 200px;
+    position: relative;
+    
+}
+#tva-td{
+    color:cadetblue;
+    
+    
+}
+.tva-img{
+    width: 50%;
+    float: left;
+    margin-right: 20px;
+    width: 150px;
+}
+
+.gth-cap{
+    border-top: cadetblue solid 70px;
+    top: 100px;
+    margin-left: 20px;
+   position: relative;
+}
+#gth-cap{
+    color: white ;
+    top: 33px;
+    left: 50px;
+    font-size: 23px;
+    position: relative;
+}   
+
+
+
+
+
+.footer{
+    background-color: cadetblue;
+    width: 100%;
+    font-size: 30px;   
+    text-align: center; 
+    border: 2px solid rgb(20, 73, 75);
+    clear: both;
+}
+#backtop{
+    right: 10px;
+    bottom: 10px;
+    display: block;
+    position: fixed;
+}
+#backtop>img{
+    
+   size: 2000px;
+}
+#time{
+    font-size: 30px;
+    background-color: rgb(240, 238, 235);
+    padding: 15px 25px;
+    margin-top: 50px;
+    text-align: justify;
+
+}

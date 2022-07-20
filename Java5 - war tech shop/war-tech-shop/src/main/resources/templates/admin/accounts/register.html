@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/login.css">
+</head>
+<body>
+    <div class="login-box">
+        <h2>Register</h2>
+        <form th:action="@{/register}" method="post" th:object="${customer}">
+          <a class="m-auto" th:if="${message != null}" >
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            [[${message}]]
+          </a>
+          
+          <!-- <input type="hidden" th:field="*{isEdit}"> -->
+          <div class="user-box">
+            <input type="text" th:field="*{account.username}" name="username" id="username" aria-describedby="usernameHelpId" placeholder="Username" required> 
+            <small id="usernameHelpId" th:if="${#fields.hasErrors('account.username')}" class="form-text text-muted">User name is invalid</small>
+            <label>Username</label>
+          </div>
+          <div class="user-box">
+            <input type="password" th:field="*{account.password}" name="password" id="password"  aria-describedby="passwordHelpId" placeholder="password" required>
+            <small id="passwordHelpId" th:if="${#fields.hasErrors('account.password')}" class="form-text text-muted">Password is invalid</small>
+            <label>Password</label>
+          </div>
+          <div class="user-box">
+            <input type="text" th:field="*{name}" name="name" id="name" aria-describedby="nameHelpId" placeholder="name" required> 
+            <small id="nameHelpId" th:if="${#fields.hasErrors('name')}" class="form-text text-muted">Name is invalid</small>
+            <label>Full name</label>
+          </div>
+          <div class="user-box">
+            <input type="text"  name="phone"  th:field="*{phone}" id="phone" aria-describedby="phoneHelpId" placeholder="Phone" required>
+            <small id="phoneHelpId" th:if="${#fields.hasErrors('phone')}" class="form-text text-muted">Phone is invalid</small>
+            <label >Phone</label>
+          </div>
+          <div class="user-box">
+            <input type="email"   th:field="*{account.email}"     name="email" id="email" aria-describedby="emailHelpId" placeholder="Email" required>
+            <small id="emailHelpId" th:if="${#fields.hasErrors('account.email')}" class="form-text text-muted">Email is invalid</small>
+            <label >Email</label>
+          </div>
+          <div class="user-box">
+            <input type="text"   th:field="*{address}"   name="address" id="address" aria-describedby="addressHelpId" placeholder="Address" required>
+            <small id="addressHelpId" th:if="${#fields.hasErrors('address')}" class="form-text text-muted">Address is invalid</small>
+            <label >Address</label>
+          </div>
+
+         
+
+          <!-- <div class="user-box">
+            <input type="radio" readonly th:field="*{admin}" name="admin" id="admin" value="true"  aria-describedby="adminHelpId" placeholder="admin" required>
+            <input type="radio" readonly th:field="*{admin}" name="admin" id="admin" value="false"  aria-describedby="adminHelpId" placeholder="Member" required>
+            <small id="adminHelpId" th:if="${#fields.hasErrors('admin')}" class="form-text text-muted">admin is invalid</small>
+            <label>admin</label>
+          </div> -->
+          <button type="reset">Reset
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+          <button >
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            register
+          </button>
+          <a type="button" th:href="@{/alogin}">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+           Login
+          </a>
+        </form>
+      </div>
+</body>
+</html>

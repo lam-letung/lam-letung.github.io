@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/login.css">
+</head>
+<body>
+    <div class="login-box">
+        <h2>Login</h2>
+        <form th:action="@{/alogin}" method="post" th:object="${account}">
+          <a class="m-auto" th:if="${message != null}" >
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            [[${message}]]
+          </a>
+          <div class="user-box user-box_tk">
+            <input type="text" th:field="*{username}" name="username" id="username" aria-describedby="usernameHelpId" placeholder="Username" required> 
+            <small id="usernameHelpId" th:if="${#fields.hasErrors('username')}" class="form-text text-muted">User name is invalid</small>
+            <label>Username</label>
+          </div>
+          <div class="user-box">
+            <input type="password" th:field="*{password}" name="password" id="password"  aria-describedby="passwordHelpId" placeholder="password" required>
+            <small id="passwordHelpId" th:if="${#fields.hasErrors('password')}" class="form-text text-muted">Password is invalid</small>
+            <label>Password</label>
+          </div>
+          <button type="reset">Reset
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+          <button >
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+           Login
+          </button>
+          <a type="button" th:href="@{/register}">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+           Register
+          </a>
+        </form>
+      </div>
+</body>
+</html>

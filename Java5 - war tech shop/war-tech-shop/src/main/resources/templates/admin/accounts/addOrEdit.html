@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+    layout:decorate="~{admin/dashboardLayout.html}">
+
+<head>
+</head>
+
+<body>
+    <section class="row" layout:fragment="content">
+
+        <div class="col  mt-4">
+            <form action="/admin/accounts/saveOrUpdate" method="post" enctype="multipart/form-data"
+                th:object="${account}">
+                <div class="card">
+                    <div class="card-header">
+                        <h2 th:text="${account.isEdit? 'Edit Account':'Add New Account'}">Add new account</h2>
+                    </div>
+                    <div class="card-body ">
+                        <div class="row">
+                            <div class="col">
+                                <input type="hidden" th:field="*{isEdit}">
+                                <div class="mb-3">
+                                    <label for="username" class="form-label">Username:</label>
+                                    <input type="text" class="form-control" th:field="*{username}" name="username"
+                                        id="username" aria-describedby="usernameHelpId" placeholder="Username">
+                                    <small id="usernameHelpId" th:if="${#fields.hasErrors('username')}" class="form-text text-muted">User name is invalid</small>
+                                </div>
+                                <div class="mb-3">
+                                  <label for="password" class="form-label">Password</label>
+                                  <input type="password" class="form-control"
+                                  th:field="*{password}" name="password" id="password"  aria-describedby="passwordHelpId" placeholder="password">
+                                  <small id="passwordHelpId" th:if="${#fields.hasErrors('password')}" class="form-text text-muted">Password is invalid</small>
+                                </div>
+                               
+                                
+                                <div class="mb-3" th:if="${isEdit}">
+                                    <label for="status" class="form-label">Status</label>
+                                    <select class="form-control" name="status" id="status" th:field="*{status}">
+                                        <option value="0">Online</option>
+                                        <option value="1">Offline</option>
+                                    </select>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="email" class="form-label">email:</label>
+                                    <input type="email" class="form-control" th:field="*{email}" name="email"
+                                        id="email" aria-describedby="emailHelpId" placeholder="email">
+                                    <small id="emailHelpId" th:if="${#fields.hasErrors('email')}" class="form-text text-muted">Email is invalid</small>
+                                </div>
+                               
+                                <input type="hidden" th:field="*{isEdit}">
+                                <!-- <div class="mb-3">
+                                    <label for="birthDay" class="form-label">birthDay:</label>
+                                    <input type="text" class="form-control" th:field="*{birthDay}" name="birthDay"
+                                        id="birthDay" aria-describedby="birthDayHelpId" placeholder="birthDay">
+                                    <small id="birthDayHelpId" th:if="${#fields.hasErrors('birthDay')}" class="form-text text-muted">Birthday is invalid</small>
+                                </div> -->
+                            </div>
+                            <!-- <div class="col-5">
+                                <script  type="text/javascript">
+                                    function chooseFile(fileInput){
+                                        if(fileInput.files && fileInput.files[0]){
+                                         var reader = new FileReader();
+ 
+                                         reader.onload = function(e){
+                                             $('#image').attr('src',e.target.result);
+                                         }
+ 
+                                         reader.readAsDataURL(fileInput.files[0]);
+                                        }
+                                    }
+                                 </script>
+                                <img id="image" 
+                                th:src="${account.image!=null? '/admin/accounts/images/' + account.image : '/images/imageError.jpg'}"
+                                 src="/images/imageError.jpg" width="75%" class="img-fluid rounded-top "
+                                alt="">
+                                <div class="mb-3">
+                                    <label for="accountImage" class="form-label">Image File</label>
+                                    <input type="file" onchange="chooseFile(this)" name="imageFile" class="form-control"
+                                        id="accountImage" placeholder="Account Image"
+                                        aria-describedby="accountImageFileHelpId">
+                                        <div id="prodcuctImageFileHelpId" class="form-text">Product Image is required</div>
+                                </div>
+                            
+                            </div> -->
+                        </div>
+                        
+                         
+                       
+                       
+                        
+                    </div>
+                    <div class="card-footer text-muted">
+                        <button type="reset" class="btn btn-secondary">Reset</button>
+                        <a th:href="@{/admin/accounts}" class="btn btn-success">List Accounts</a>
+                        <button class="btn btn-primary"><i class="fa fa-save" aria-hidden="true"></i>
+                            <span th:if="${account.isEdit}">Update</span>
+                            <span th:unless="${account.isEdit}">Save</span>
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
+</body>
+
+</html>

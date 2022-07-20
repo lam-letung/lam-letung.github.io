@@ -1,0 +1,552 @@
+body{
+    margin: 0 auto;
+    padding: 0px;
+    width: 2000px;
+    height: 3500px;
+    
+    min-width: 1000px;
+    background-image: url(http://thptleloi.quangtri.edu.vn/upload/21541/20201115/breadcrumbs-bg-1_0492016d0_4edc8a7006.jpg) ;
+}
+.logo{
+    background-color:cadetblue;
+    width: 100%;
+    height: 60px;
+}
+
+.t1-trai>a{
+    color: white;
+    text-decoration: none;
+}
+.t1-trai>img{
+    width: 30px;
+}
+
+.logo .t1-trai{
+    margin: 10px 10px 20px 20px;
+    float: left;
+    
+    
+}
+.timkiem{
+  float: right;
+  margin: 15px 15px 20px 20px;
+    min-width: 20%;
+    height: 25px;
+}
+.timkiem-logo{
+    float: right;
+      width: 30px;
+      padding-top: 15px;
+     
+}
+.logo-truong{
+    max-width: 2400px;
+    margin: 0 auto;
+  
+ 
+}
+.logo-truong>img{
+    width: 100%;
+}
+
+.hmenu{
+    margin: 0px auto;
+    padding: 0px;
+    border-radius: 5px;
+    background-color: cadetblue;
+    list-style: none;
+    width: 100%;
+    height: 70px;
+    max-width: 2400px;
+}
+.hmenu>li>a>img{
+    width: 40px;
+    margin-bottom: -12px;
+    
+}
+ul.hmenu{
+    float: left;
+    position: relative;
+}
+ul.hmenu>li{  
+    float: left;
+    
+    position: relative;
+}
+.hmenu>li>a{  
+    text-decoration: none;
+    color: white;
+    display: block;
+    line-height: 80px;
+    font-size: 30px;
+    margin: 0 auto;
+    font-variant: small-caps;
+    padding: 0 25px;
+
+}
+ul.hmenu>li>a:hover{
+    background:white;
+    color: black;
+    font-weight: bolder;
+    
+ 
+}
+ul.hmenu>li>a:focus{
+    background:white;
+    color: red;
+    font-weight: bolder;
+    
+ 
+}
+ul.hmenu>li:hover>.menu-con-gioi-thieu{
+    display: block;
+}
+ul.menu-con-gioi-thieu{
+    margin: 0px;
+    padding: 0px;
+    border-radius: 5px;
+    list-style: none;
+    width: auto;
+    position: absolute;
+    display: none;
+ 
+}
+ul.menu-con-gioi-thieu>li>a{
+    display: block;
+    line-height: 30px;
+    text-decoration: none;
+    font-variant: small-caps;
+    padding: 0 25px;
+    
+
+    background-color:cadetblue ;
+    color:black;
+ ;
+}
+ul.menu-con-gioi-thieu>li>a:hover{
+    background-color: white;
+    color: black;
+    font-weight: bolder;
+    border-left: 4px solid cadetblue;
+
+;
+}
+ul.menu-con-gioi-thieu>li>a:focus{
+    background:white;
+    color: red;
+    font-weight: bolder;
+    
+ 
+}
+#time{
+    font-size: 30px;
+    background-color: rgb(240, 238, 235);
+    padding: 15px 25px;
+    margin-top: 50px;
+    text-align: justify;
+
+}
+div.trangchu{
+    width: 70%;
+    height: 100%;
+    clear: both;
+    float: left;
+    min-width: 1000px;
+    
+}
+.ttnb{
+    max-width: 70%;
+    top: 50px;
+    left: 15%;
+    border-bottom: 4px solid cadetblue ;
+    border-right: 2px solid cadetblue ;
+    border-left: 2px solid cadetblue ;
+    border-top:  50px solid cadetblue;
+    border-radius: 20px;  
+    float: left;
+    position: relative;
+    
+}
+.ttnb>ul{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    min-height: 30px;
+    float: left;
+}
+.ttnb>ul>li{
+    display: inline-block;   
+}
+
+#ttnb{
+    top: -58px;
+    left: 5%;
+    height: 0px;
+    color: white;
+    position: relative;
+}
+.ttnb1{
+    width: 100%;
+    float: left;
+    
+    position: relative;
+    border-bottom: 1px dashed rgb(139, 195, 233);
+    box-sizing: border-box;
+    
+}
+.ttnb>ul>li.ttnb1-photo{
+    width: 40%;
+    float: left;
+   margin: 0 auto;
+   
+}
+.ttnb>ul>li.ttnb1-photo>img{
+    max-width:100% ;
+    float: left;
+}
+.ttnb>ul>li.ttnb-noidung{
+   padding: 7px 5px;
+   font-size: 30px;
+    box-sizing: border-box;
+    display: inline-block;
+    line-height: 30px;
+    max-width: 60%; 
+    float: left;
+    width: 100%;  
+}
+.banner1{
+    min-width: 100%;
+    margin-bottom: -100px;
+    padding-top: 150px;
+    position: relative;;
+}
+.banner2{
+    margin-top: 30px;
+    width: 100%;
+    position: relative;
+}
+.banner3{
+    
+    width: 100%;
+    position: relative;
+}
+.tt{
+    
+    margin: 15px 10px;
+    max-width: 35%;
+    top: 4%;
+    left: 15%;
+    border-bottom: 4px solid cadetblue ;
+    border-right: 2px solid cadetblue ;
+    border-left: 2px solid cadetblue ;
+    border-top:  50px solid cadetblue;
+    border-radius: 10px;  
+    float: left;
+    border-radius: 20px;
+    min-height: 23.5%;
+    position: relative;
+}
+#tt{
+    top: -58px;
+    left: 5%;
+    height: 0px;
+    color: white;
+    position: relative;
+}
+
+.ttgd-noidung{
+    border-bottom: 1px dashed rgb(139, 195, 233);
+    box-sizing: border-box;
+    display: inline-block;
+    line-height: 30px;
+    padding: 7px 5px;
+   font-size: 30px;
+    width: 100%;
+}
+.green{
+    color: green;
+}
+.red{
+    color: red;
+}
+.cadetblue{
+    color: cadetblue;
+}
+.gray{
+    color: gray ;
+}
+.ttgd-noidung>img{
+    width: 25px;
+}
+.vbm-form{    
+        margin: 15px 10px;
+        max-width: 35%;
+        top: 4%;
+        left: 15%;
+        border-bottom: 4px solid cadetblue ;
+        border-right: 2px solid cadetblue ;
+        border-left: 2px solid cadetblue ;
+        border-top:  50px solid cadetblue;
+        border-radius: 10px;  
+        float: left;
+        border-radius: 20px;
+        min-height: 23.5%;   
+        position: relative;
+}
+.thong-bao{
+    width: 40px;
+}
+#vbm{
+    top: -58px;
+    left: 5%;
+    height: 0px;
+    color: white;
+    position: relative;
+}
+.vbm-noidung{
+    border-bottom: 1px dashed rgb(139, 195, 233);
+    box-sizing: border-box;
+    display: inline-block;
+    line-height: 30px;
+    padding: 7px 5px;
+   font-size: 30px;
+    width: 100%;
+}
+.vbm-noidung>img{
+    width: 25px;
+}
+.lich-cong-tac-form{
+    margin: 15px 10px;
+    max-width: 35%;
+    top: 4%;
+    left: 15%;
+    border-bottom: 4px solid cadetblue ;
+    border-right: 2px solid cadetblue ;
+    border-left: 2px solid cadetblue ;
+    border-top:  50px solid cadetblue;
+    border-radius: 10px; 
+    clear: both; 
+    float: left;
+    border-radius: 20px;
+    min-height: 23.5%;   
+    position: relative;
+}
+#lich-cong-tac{
+    
+        top: -58px;
+        left: 5%;
+        height: 0px;
+        color: white;
+        position: relative;
+    
+}
+.lich-cong-tac-noidung{
+    border-bottom: 1px dashed rgb(139, 195, 233);
+    box-sizing: border-box;
+    display: inline-block;
+    line-height: 30px;
+    padding: 7px 5px;
+   font-size: 30px;
+   float: left;
+    width: 100%;
+}
+.lich-cong-tac-noidung>img{
+    width: 25px;
+}
+.GD-KNS-GTS-form{
+    margin: 15px 10px;
+    max-width: 35%;
+    top: 4%;
+    left: 15%;
+    border-bottom: 4px solid cadetblue ;
+    border-right: 2px solid cadetblue ;
+    border-left: 2px solid cadetblue ;
+    border-top:  50px solid cadetblue;
+    border-radius: 10px; 
+     
+    float: left;
+    border-radius: 20px;
+    min-height: 23.5%;   
+    position: relative;
+}
+#GD-KNS-GTS{
+    
+    top: -58px;
+    left: 5%;
+    height: 0px;
+    color: white;
+    position: relative;
+
+}
+.gd-KNS-GTS-noidung{
+    border-bottom: 1px dashed rgb(139, 195, 233);
+    box-sizing: border-box;
+    display: inline-block;
+    line-height: 30px;
+    padding: 7px 5px;
+   font-size: 30px;
+   float: left;
+   
+    width: 100%;
+}
+.gd-KNS-GTS-noidung>img{
+    width: 25px;
+}
+.menucon{
+    float: left;
+    
+    width: 30%;
+    height: 100%;
+    position: relative;
+}
+.giao-an-dien-tu-form{
+    margin: 15px 10px;
+    width: 100%;
+    top: 1%;
+    
+    border-bottom: 4px solid cadetblue ;
+    border-right: 2px solid cadetblue ;
+    border-left: 2px solid cadetblue ;
+    border-top:  50px solid cadetblue;
+    border-radius: 10px; 
+     
+    float: left;
+    border-radius: 20px;
+    min-height: 23.5%;   
+    position: relative;
+}
+#giao-an-dien-tu{
+    
+    top: -64px;
+    left: 5%;
+    float: left;
+    height: 0px;
+    color: white;
+    position: relative;
+
+}
+#giao-an-dien-tu>img{
+    height: 46px;
+    float: left;
+    
+}
+.giao-an-dien-tu-noidung{
+    border-bottom: 1px dashed rgb(139, 195, 233);
+    box-sizing: border-box;
+    display: inline-block;
+    line-height: 30px;
+    padding: 5px 5px;
+   font-size: 37px;
+   float: left;
+   list-style: none;
+    width: 100%;
+}
+.map-form{
+    margin: 0px 10px;
+    width: 100%;
+    height: 15%;
+    border-bottom: 4px solid cadetblue ;
+    border-right: 2px solid cadetblue ;
+    border-left: 2px solid cadetblue ;
+    border-top:  64px solid cadetblue;
+    border-radius: 10px; 
+     
+    float: left;
+    border-radius: 20px;
+     
+    position: relative;
+}
+#map{
+    bottom: 60px;
+    left: 5%;
+    float: left;
+    height: 0px;
+    color: white;
+    position: relative;
+
+}
+#map>iframe{
+    margin-right: 20px;
+    height: 550px;
+    border-radius: 30px;
+   
+    right: 30px;
+    position:relative  ;
+}
+.thongke-form{
+    margin: 15px 10px;
+    width: 100%;
+    border-bottom: 4px solid cadetblue ;
+    border-right: 2px solid cadetblue ;
+    border-left: 2px solid cadetblue ;
+    border-top:  50px solid cadetblue;
+    border-radius: 10px; 
+     
+    float: left;
+    border-radius: 20px;
+     
+    position: relative;
+}
+#thongke{
+    
+    top: -60px;
+    left: 5%;
+    height: 0px;
+    color: white;
+    position: relative;
+
+}
+#thongke>img{
+    width: 40px;
+    top: -4px;
+    float: left;
+    position: relative;
+}
+
+.thongke-noidung{
+    border-bottom: 1px dashed rgb(139, 195, 233);
+    box-sizing: border-box;
+    display: inline-block;
+    line-height: 30px;
+    padding: 5px 5px;
+   font-size: 37px;
+   float: left;
+   list-style: none;
+    width: 100%;
+    margin-top: 10px;
+
+}
+.thongke-noidung>img{
+    width: 50px;
+    margin-right: 20px;
+    margin-top: 10px;
+
+}
+.trai{
+    position: absolute;
+    float: left;
+    padding-top: 20px;
+}
+.phai{
+    
+    position: relative;
+    float: right;
+    padding-top: 20px;
+}
+    .footer{
+    background-color: cadetblue;
+    width: 100%;
+    font-size: 30px;   
+    text-align: center; 
+    border: 2px solid rgb(20, 73, 75);
+    clear: both;
+}
+#backtop{
+    right: 10px;
+    bottom: 10px;
+    display: block;
+    position: fixed;
+}
+#backtop>img{
+    
+   size: 2000px;
+}

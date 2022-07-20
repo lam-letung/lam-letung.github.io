@@ -1,0 +1,158 @@
+body{
+    background-color: #fdfcfc;
+}
+
+.m-y-31{
+    margin-top:4rem !important;
+    margin-bottom: 4rem !important;
+}
+
+.mt-4-5{
+    margin-top: 4.5rem!important;
+}
+
+.mt-5r{
+    margin-top: 5rem!important;
+}
+
+.mt-8r{
+    margin-top: 8rem!important;
+}
+
+
+
+.img-thumbnail{
+    padding: 0;
+    border: none;
+    border-radius: 0;
+}
+
+.dropdown-item:hover{
+    color: rgb(246 94 57 / 50%) !important;
+}
+
+.nav-logo--icon{
+    color: white;
+    background-color: #000;
+    border-radius: 50%;
+    padding: 4px 8px;
+}
+
+.nav-link-user:hover .dropdown-menu{
+    display: block !important;
+}
+
+/* banner */
+.header-banner{
+
+}
+
+.banner-img{
+    border-radius: 20px;
+}
+
+/* introduc */
+
+
+/* slick */
+.text-content-list>h2{
+    font-weight: 900;
+    font-size: 24px !important;
+    
+}
+
+.slick-arrow{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+    border: none;   
+    padding: 10px 20px;
+    background: #fff;
+    border-radius: 50px;
+    box-shadow: 0 0 7px -4px #000;
+}
+
+.list-subjects{
+}
+
+.nav-item{
+    /* padding: 8px; */
+}
+
+.nav-item>a:hover{
+    color: rgb(246 94 57 / 50%) !important;
+}
+
+.slick-arrow:hover{
+    color: rgb(246 94 57 / 50%);
+    box-shadow: 0 0 5px 0 rgb(246 94 57 / 50%);
+}
+
+.item-subjects{
+    border-radius: 20px !important;
+    border: 1px solid black;
+    overflow: hidden;
+    background-color: white;
+}
+
+.item-subject-text{
+    background-color: #ccc;
+}
+
+.img-thumbnail--none{
+    border: none !important;
+}
+
+.slick-prev
+{
+    left: 0px;
+}
+
+.slick-next{
+    right: 0px;
+  
+}
+
+/* intro-3 */
+.introdu-3-item_heading h1{
+    font-size: 3rem;
+}
+
+.introdu-3-item_heading-icon{
+    font-size: 4rem;
+}
+
+/* footer */
+footer{
+
+    background-color: white;
+}
+
+/* form login */
+.box-banner{
+    background: linear-gradient(90deg,#f65e38 0,#f68a39 51%,#f65e38);
+}
+
+.box-banner_text{
+    color: #fff;
+}
+
+.slick-slide {
+    display: none;
+    float: left;
+    height: 100%;
+    min-height: 1px;
+}
+
+.slick-initialized .slick-slide {
+    display: block !important;
+}
+
+.navbar-nav{
+    text-align: centerheader-banner;
+}
+
+.modal{
+    display: none;
+}
