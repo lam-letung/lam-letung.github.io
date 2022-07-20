@@ -1,0 +1,36 @@
+<!-- list subject -->
+<div class="box-subjects my-3 mt-5r " >
+    <div class="heading-subject container mt-5 ">
+      <h3 class="ms-3 fw-bold text-center">Các môn học</h3>
+      <p class="ms-3 fw-normal text-center">Cùng Study With Me khám phá các môn học</p>
+    </div>
+    
+    <div class="row container m-auto " ng-controller="subjectCtrl">
+      <div ng-repeat="sub in subjects | limitTo : 6: begin" class="col-sm-4 my-2">
+        <div class="">
+          <div class="card">
+            <a href="#!quiz/{{sub.Id}}/{{sub.Name}}" class="text-decoration-none text-black">
+              <div class="card-body">
+                <img src="./images/logos/{{sub.Logo}}" class="mx-auto d-block" alt="" >
+              </div>
+              <div class="card-footer  text-center">
+                {{sub.Name}}
+              </div>
+            </a>
+           
+            </div>
+          </div>
+          
+            
+          
+        </div>
+        <div class="text-center">
+          <button type="button" name="" id="" ng-click="first()" class="btn btn-primary"  style="border-color: rgb(68, 68, 68) !important;background-color: rgb(107, 107, 107); ">First</button>
+          <button type="button" name="" id=""  ng-click="prev()" class="btn btn-primary"  style="border-color: rgb(68, 68, 68) !important;background-color: rgb(107, 107, 107);"  > Prev</button>
+          <button type="button" name="" id=""  ng-click="next()" class="btn btn-primary"  style="border-color: rgb(68, 68, 68) !important;background-color: rgb(107, 107, 107);">Next</button>
+          <button type="button" name="" id="" ng-click="last()" class="btn btn-primary"  style="border-color: rgb(68, 68, 68) !important;background-color: rgb(107, 107, 107);">Last</button>
+        </div>
+       
+      </div>
+     
+    </div>

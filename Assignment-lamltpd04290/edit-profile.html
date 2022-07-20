@@ -1,0 +1,78 @@
+<main id="main">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <section class="breadcrumbs">
+      <div class="container">
+  
+        <div class="d-flex justify-content-between align-items-center">
+          <h2>Thay đổi thông tin</h2>
+          <ol >
+            <li><a href="index.html" >Trang chủ</a></li>
+            <li>Thay đổi thông tin</li>
+          </ol>
+        </div>
+  
+      </div>
+    </section><!-- End Breadcrumbs -->
+  
+    <section class="inner-page" ng-controller="edit-profile">
+      <div class="container">
+        <div class="container rounded bg-white mt-5">
+          <div class="row">
+              <div class="col-md-4 border-right">
+                  <div class="d-flex flex-column align-items-center text-center p-3 py-5" ><img class="rounded-circle mt-5" src="./images/LogoFPT-2017-copy-3042-1513928399.jpg" width="200" height="150" >
+                    <span class="font-weight-bold mt-3">{{infors.fullname}}</span>
+                    <span class="text-black-50">{{infors.email}}</span>
+                    <span>Việt Nam</span></div>
+              </div>
+              <div class="col-md-8">
+                  <div class="p-3 py-5">
+                      <div class="d-flex justify-content-between align-items-center mb-3">
+                          <div class="d-flex flex-row align-items-center back"><i class="fa fa-long-arrow-left mr-1 mb-1"></i>
+                              <h6><a href="index.html">Trang chủ</a></h6>
+                          </div>
+                          <h6 class="text-right">Thay đổi thông tin</h6>
+                      </div>
+                      <div class="row mt-2">
+                          <div class="col-md-6">
+                            <label for="fullname">Tài khoản:</label>
+                            <input type="text" class="form-control" disabled ng-model="username" placeholder="{{infors.username}}"></div>
+                          
+                          <div class="col-md-6">
+                            <label for="fullname">Họ và tên:</label>
+                            <input type="text" class="form-control" ng-model="fullname" placeholder="{{infors.fullname}}" value="{{infors.fullname}}"></div>
+                      </div>
+                      <div class="row mt-3">
+                          <div class="col-md-6">
+                            <label for="fullname">Email:</label>
+                            <input type="email" class="form-control" ng-model="email" placeholder="{{infors.email}}" value="{{infors.email}}"></div>
+                          <div class="col-md-6">
+                            <label for="fullname">Giới tính:</label>
+
+                            <div class="input-group   form-check-inline">
+                              <label for="" class="form-check-label">
+                                  <input type="radio" ng-model="gender" name="gender" id="gender"     value="true" class="form-check-input" required checked>
+                                  Nam &nbsp;
+                              </label>
+                              <label for="" class="form-check-label">
+                                  <input type="radio" ng-model="gender" name="gender" id="gender"  value="false" class="form-check-input"  required>
+                                  Nữ &nbsp;
+                              </label>
+                          </div>
+                      </div>
+                      <div class="row mt-3">
+                        <div class="col-md-6">
+                            <label for="fullname">Ngày sinh:</label>
+                            <input type="date" class="form-control" ng-model="birthday" id="birthday" value="{{infors.birthday | date : 'yyyy-MM-dd' }}"></div>
+                          <!-- <div class="col-md-6"><input type="text" class="form-control"  placeholder="Địa chỉ"></div> -->
+                      </div>
+                      <div class="mt-5 text-right"><button ng-click="editprofile()" ng-model="edit" class="btn btn-primary profile-button"  style="border-color: rgb(68, 68, 68) !important;background-color: rgb(107, 107, 107);" type="button">Lưu</button></div>
+                  </div>
+              </div>
+          </div>
+      </div>
+      </div>
+    </section>
+  
+  </main><!-- End #main -->
+  

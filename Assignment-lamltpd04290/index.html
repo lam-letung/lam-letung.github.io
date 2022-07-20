@@ -1,0 +1,366 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!-- css -->
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/userProfile.css">
+    <link rel="stylesheet" href="./css/edit-profile.css">
+   
+    <!-- link fonts -->
+    <link rel="stylesheet" href="./icons/fontawesome-free-5.15.4-web/css/all.min.css">
+    
+
+    
+    <!-- script file -->
+    <!-- script angular -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+      <script src="./js/angular-1.8.2/angular-route.min.js"></script>
+      <script src="./js/angular-1.8.2/angular-cookies.js"></script>
+      <!-- script main-->
+      <script src="./js/main.js"></script>
+      
+      <!-- cdn slick -->
+      <link
+          rel="stylesheet"
+          type="text/css"
+          href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+        />
+    <title>Study with me</title>
+  </head>
+  <body ng-app="myapp">
+    <div class="container-fluid ">
+      <!--Start header -->
+        <header class=" border-bottom fixed-top bg-white">
+            <nav class=" navbar navbar-expand-lg navbar-light bg-default ">
+                <div class="container container-brand">
+                  <a class="navbar-brand border rounded-circle bg-black nav-logo shadow" href="#!/">
+                      <i class="fab fa-studiovinari fs-1 fc-white nav-logo--icon"></i>
+                    </a>
+                    <h1 class="mb-1">Study With Me</h1>
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                      <li class="nav-item">
+                        <a class="nav-link fw-bolder" aria-current="page" href="#">Giới thiệu</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link fw-bolder" aria-current="page" href="#!/subjects">Khoá học</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link fw-bolder" href="#intro3-panel">Liên hệ</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link fw-bolder" href="#">Góp ý</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link fw-bolder" href="#">Hỏi đáp</a>
+                      </li>
+                      <li class="nav-link-user nav-item dropdown" ng-controller="studentController">
+                        <a class="nav-link  fw-bolder dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          Tài khoản
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                          <li><a class="dropdown-item"  data-bs-toggle="modal" ng-show="!isLogin()" data-bs-target="#registerModal" href="#">Đăng ký</a></li>
+                          <li><a class="dropdown-item"  data-bs-toggle="modal" ng-show="!isLogin()" data-bs-target="#loginModal" href="#">Đăng nhập</a></li>
+                          <li><a class="dropdown-item"  data-bs-toggle="modal" ng-show="!isLogin()" data-bs-target="#forgotModal" href="#">Quên mật khẩu</a></li>
+                          
+                          <li><a class="dropdown-item"  data-bs-toggle="modal" ng-show="isLogin()"  data-bs-target="#loginModal" ng-click="logout()" href="#">Đăng xuất</a></li>
+                          <li><a class="dropdown-item"  data-bs-toggle="modal" ng-show="isLogin()"  data-bs-target="#editPassModal" href="#">Đổi mật khẩu</a></li>
+                          <li><a class="dropdown-item"   ng-show="isLogin()"    href="#!/edit-profile">Cập nhật tài khoản</a></li>
+                          <li><a class="dropdown-item"   ng-show="isLogin()"    href="#!/user-profile">Thông tin tài khoản</a></li>
+
+                        </ul>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link fw-bolder nav-item_icon " href="#"><i class="fab fa-facebook"></i></a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link fw-bolder nav-item_icon" href="#"><i class="fab fa-instagram"></i></a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link fw-bolder nav-item_icon" href="#"><i class="fab fa-twitter"></i></a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </nav>
+            
+        </header>
+        <!-- end header -->
+
+       <div ng-view></div>
+        <!-- start footer -->
+        <footer class="container-fluid bg-white mt-5 border shadow">
+          <div class="box-footer_content container ">
+            <div class="footer-box row py-5 ">
+              <div class="footer-item col-3">
+                <div class="footer-item_header-brand mb-4">
+                  <i class="fab fa-studiovinari shadow fw-bold p-2 fc-black nav-logo--icon rounded-circle shadow bg-black fs-3"></i>
+                      <h1 class="d-inline fw-bold ms-2 fs-3" >Study With Me</h1>
+                </div>
+                <div class="footer-item_body-brand">
+                  
+                    <p class="body-brand_item text-wrap">
+                      <i class="fas fa-comments fs-3 text-center"></i>
+                      http://m.me/studywithme
+                    </p>
+                    <p class="body-brand_item">
+                      <i class="fas fa-phone-volume fs-3 text-center me-2"></i>
+                      092131123
+                    </p>
+                    <div class="body-brand_item"></div>
+                </div>
+              </div>
+              <!-- Danh mục -->
+              <div class="footer-item col-3">
+                <div class="footer-item_header-category mb-4">
+                  <h1 class="d-inline fw-bold ms-2 fs-5" >DANH MỤC</h1>
+                </div>
+                <div class="footer-item_body-category">
+                  <p class="mb-2">Lập trình Android nâng cao</p>
+                  <p class="mb-2">Xây dựng trang web</p>
+                  <p class="mb-2">Cơ sở dữ liệu</p>
+                  <p class="mb-2">SQL Server</p>
+                  <p class="mb-2">Internet Marketing</p>
+                  <p class="mb-2">Lập trình hướng đối tượng với java</p>
+                  <p class="mb-2">Lập trình PHP</p>
+                  <p class="mb-2">Điện toán đám mây</p>
+                  <p class="mb-2">Lập trình Android cơ bản</p>
+                  <p class="mb-2">Lập trình game 2D</p>
+                  <p class="mb-2">Lập trình PHP</p>
+                  <p class="mb-2">Thiết kế giao diện trên Android</p>
+                  <p class="mb-2">Thiết kế Web cho điện thoại di động</p>
+                  <p class="mb-2">Lập trình ASP.NET</p>
+                </div>
+              </div>
+              <!-- Về chúng tôi -->
+              <div class="footer-item col-3">
+                <div class="footer-item_header-info mb-4">
+                  <h1 class="d-inline fw-bold ms-2 fs-5" >VỀ CHÚNG TÔI</h1>
+                </div>
+                <div class="footer-item_body-info">
+                  <a href="#" class="mb-2 d-block text-decoration-none text-body">Blog</a>
+                  <a href="#" class="mb-2 d-block text-decoration-none text-body">Điều khoản hoạt động</a>
+                  <a href="#" class="mb-2 d-block text-decoration-none text-body">18001111</a>
+                  <a href="#" class="mb-2 d-block text-decoration-none text-body">0941194703</a>
+                  <a href="#" class="mb-2 d-block text-decoration-none text-body">info@studywithme.com</a>
+                </div>
+              </div>
+              <div class="footer-item col-3">
+                <div class="footer-item_header-down mb-4">
+                  <h1 class="d-inline fw-bold ms-2 fs-5" >Tải ứng dụng Study With Me</h1>
+                </div>
+                <div class="footer-item_body-down">
+                  <div class="introdu-3-item_heading-contact row">
+                    <div class="introdu-3-item_heading-contact--qr col-5">
+                      <img src="./images/qr-code.png" class="img-thumbnail h-50 mx-auto d-block align-content-center mt-4"  alt="">
+                    </div>
+                    <div class="introdu-3-item_heading-contact--social col-6">
+                      <div class="heading-contact--social_img">
+                        <img src="./images/apple-store.svg" class="img-thumbnail mt-2 " alt="">
+                      </div>
+                      <div class="heading-contact--social_img">
+                        <img src="./images/google-play.svg" class=" img-thumbnail mt-2"  alt="">
+                      </div>
+                      <div class="heading-contact--social_img ">
+                        <img src="./images/huawei.svg" class="img-thumbnail mt-2 " alt="">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+        </footer>
+        <!-- end footer -->
+    </div>
+        
+
+
+        <!-- Modal dang ký -->
+        <div  class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" style="display: none;">
+          <div class="modal-dialog ">
+            <div class="modal-content " >
+              <div class="modal-header">
+                <h5 class="modal-title" id="registerModalLabel">Đăng ký</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body" ng-controller="registration"  >
+                <form  name="registForm">
+                  <div class="mb-3">
+                    <label for="username" class="form-label">Tài khoản:</label>
+                    <input ng-model="username" ng-pattern="/^[\w]{0,9}$/" type="text" class="form-control " name="username" aria-describedby="usernamehelpId" placeholder="Tài khoản" required  >
+                   <span class="alert-danger form-control" ng-show="registForm.username.$error.pattern">Tên đăng nhập không quá 10 ký tự, không dấu</span>
+                  </div>
+                  
+                  <div class="mb-3">
+                    <label for="password" class="form-label">Mật khẩu:</label>
+                    <input type="password" ng-model="password" class="form-control" name="password"   aria-describedby="passwordhelpId"  placeholder="Mật khẩu" required>      
+                  </div>
+
+                  <div class="mb-3">
+                    <label for="fullname" class="form-label">Họ và tên:</label>
+                    <input type="text" ng-model="fullname" class="form-control" name="fullname"  aria-describedby="fullnamehelpId" placeholder="Họ và tên" required>
+  
+                  </div>
+
+                  <div class="mb-3">
+                    <label for="email" class="form-label">Email:</label>
+                    <input type="email" ng-model="email" class="form-control" name="email"  aria-describedby="emailhelpId" placeholder="Email của bạn" required>
+                    <span class="alert-danger form-control" ng-show="registForm.email.$invalid">Email không đúng định dạng</span>
+                  </div>
+                
+
+                  <div class="mb-3">
+                      <label for="">Giới tính:</label>
+                      <div class="input-group   form-check-inline">
+                        <label for="" class="form-check-label">
+                                <input type="radio" checked ng-model="gender" name="gender"  value="true" class="form-check-input" required >
+                                Nam &nbsp;
+                        </label>
+                        <label for="" class="form-check-label">
+                                <input type="radio" checked ng-model="gender" name="gender" value="false" class="form-check-input"  required>
+                                Nữ &nbsp;
+                        </label>
+                      </div>
+                    </div>
+                  
+                  <div class="mb-3">
+                    <label for="birthday" class="form-label">Ngày sinh:</label>
+                    <input type="date" ng-model="birthday" class="form-control form-control-sm" name="birthday"  aria-describedby="birthdayhelpId" placeholder="Ngày"  required>
+                  </div>              
+                
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Huỷ</button>
+                    <button type="submit" class="btn btn-primary"  ng-click="postdata($event)">Đăng ký</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- modal dang nhap -->
+        <div class="modal fade" id="loginModal" ng-controller="studentController" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="loginModal" aria-hidden="true" style="display: none;">
+          <div class="modal-dialog" >
+            <div class="modal-content ">
+              <div class="modal-header">
+                <h5 class="modal-title" id="loginLabel">Đăng nhập</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <form name="myForm"  novalidate="">
+                  <div class="mb-3">
+                    <label for="username" class="form-label">Tài khoản:</label>
+                    <input ng-model="student.username"  type="text" class="form-control " name="username"   aria-describedby="usernamehelpId" placeholder="Tài khoản" required >
+                  </div>
+                  
+                  <div class="mb-3">
+                    <label for="password" class="form-label">Mật khẩu:</label>
+                    <input  ng-model="student.password" type="password" class="form-control" name="password"  aria-describedby="passwordhelpId"  placeholder="Mật khẩu" required>
+                   
+                  </div>
+                  
+              
+                  <div class="modal-footer">
+                    <button  type="button" class="btn btn-secondary" id="close-login"   data-bs-dismiss="modal">Close</button>
+                    <button ng-model="login" ng-click="login()" type="submit" class="btn btn-primary">Đăng nhập</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+
+        <!-- modal quen mk -->
+        <div class="modal fade"  id="forgotModal" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="forgotModal" aria-hidden="true" style="display: none;">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="forgotLabel">Quên mật khẩu</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <form action="#" name="myForm" ng-controller="studentController">
+                  <div class="mb-3">
+                    <label for="username" class="form-label">Tài khoản:</label>
+                    <input ng-model="student.username" type="text" class="form-control " name="username" aria-describedby="usernamehelpId" placeholder="Tài khoản" required >
+                  </div>
+                  <div class="mb-3">
+                    <label for="username" class="form-label">Email:</label>
+                    <input ng-model="student.email" type="text" class="form-control " name="email"  aria-describedby="emailhelpId" placeholder="email" required >
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" id="close-forgot" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="submit" ng-model="forgotpassword" ng-click="forgotpassword()" class="btn btn-primary">Xác nhận</button>
+                  </div>
+                </form>
+            </div>
+          </div>
+        </div>
+        </div>
+
+         <!-- modal đổi mk -->
+        <div class="modal fade"  id="editPassModal" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="editPassModal" aria-hidden="true" style="display: none;">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="editPassLabel">Đổi mật khẩu</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <form action="#" name="myForm" ng-controller="edit-pass">
+                  <div class="mb-3">
+                    <label for="oldpass" class="form-label">Mật khẩu cũ:</label>
+                    <input ng-model="oldpass" type="text" class="form-control " name="oldpass" aria-describedby="oldpasshelpId" placeholder="Mật khẩu cũ" required >
+                  </div>
+                  <div class="mb-3">
+                    <label for="newpass" class="form-label">Mật khẩu mới:</label>
+                    <input ng-model="newpass" type="text" class="form-control " name="newpass"  aria-describedby="newpasshelpId" placeholder="Mật khẩu mới" required >
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" id="close-editpass" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="submit" ng-model="edit-pass" ng-click="editpass()" class="btn btn-primary">Xác nhận</button>
+                  </div>
+                </form>
+            </div>
+          </div>
+        </div>
+        </div>
+        <!-- cdn angular -->
+    
+   
+    <!-- script cdn bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+   
+    <!-- script cdn slick -->
+      <script
+        type="text/javascript"
+        src="https://code.jquery.com/jquery-1.11.0.min.js"
+      ></script>
+      <script
+        type="text/javascript"
+        src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"
+      ></script>
+      <script
+        type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+      ></script>
+   
+      <script src="./js/slick.js"></script>
+
+      
+  </body>
+</html>

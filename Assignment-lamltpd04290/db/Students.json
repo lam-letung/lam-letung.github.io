@@ -1,0 +1,141 @@
+{
+  "listStudent": [
+    {
+      "username": "teonv",
+      "password": "iloveyou",
+      "fullname": "Nguyễn Văn Tèo",
+      "email": "teonv@fpt.edu.vn",
+      "gender": "true",
+      "birthday": "1995-12-21",
+      "schoolfee": "1500000",
+      "marks": "0",
+      "id": 1
+    },
+    {
+      "username": "pheonv",
+      "password": "iloveyou",
+      "fullname": "Nguyễn Văn Chí Phèo",
+      "email": "pheonv@fpt.edu.vn",
+      "gender": "true",
+      "birthday": "1985-10-11",
+      "schoolfee": "2500000",
+      "marks": "0",
+      "id": 1
+    },
+    {
+      "username": "nopt",
+      "password": "iloveyou",
+      "fullname": "Phạm Thị Nở",
+      "email": "nopt@fpt.edu.vn",
+      "gender": "false",
+      "birthday": "1993-05-15",
+      "schoolfee": "2000000",
+      "marks": "0",
+      "id": 1
+    },
+    {
+      "id": 0.304148640410818,
+      "username": "lamlt171",
+      "fullname": "Lê Tùng Lâm",
+      "password": "123",
+      "email": "lam171ttt@gmail.com",
+      "phone": "0795586535",
+      "gender": "Nam",
+      "date": "2021-04-24T17:00:00.000Z",
+      "birthday": "2022-02-28T17:00:00.000Z"
+    },
+    {
+      "id": 0.15393548220469366,
+      "username": "lamlt",
+      "fullname": "lê tùng lâm",
+      "password": "123",
+      "email": "lam171ttt@gmail.com",
+      "gender": "true",
+      "birthday": "2022-02-27T17:00:00.000Z"
+    },
+    {
+      "id": 0.09743437759621343,
+      "username": "lam171",
+      "fullname": "lê tùng lâm",
+      "password": "1231",
+      "email": "lam171ttt@gmail.com",
+      "gender": "true",
+      "birthday": "2022-02-28T17:00:00.000Z"
+    }
+  ],
+  "quiz": [
+    {
+      "id": 0.304148640410818,
+      "username": "lamlt171",
+      "inforQuizs": [
+        {
+          "namequiz": "Lập trình Android cơ bản",
+          "score": 1,
+          "date": "2022-03-02T19:09:22.680Z"
+        },
+        {
+          "namequiz": "Lập trình Android cơ bản",
+          "score": 4,
+          "date": "2022-03-02T19:07:02.169Z"
+        },
+        {
+          "namequiz": "Lập trình ASP.NET",
+          "score": 2,
+          "date": "2022-03-02T18:33:13.008Z"
+        },
+        {
+          "namequiz": "Lập trình ASP.NET",
+          "score": 1,
+          "date": "2021-04-24T06:49:40.076Z"
+        },
+        {
+          "namequiz": "Lập trình game 2D",
+          "score": 3,
+          "date": "2021-04-23T09:04:01.747Z"
+        },
+        {
+          "namequiz": "Lập trình Android cơ bản",
+          "score": 2,
+          "date": "2021-04-23T08:33:47.342Z"
+        },
+        {
+          "namequiz": "Lập trình Android cơ bản",
+          "score": 3,
+          "date": "2021-04-23T09:02:12.642Z"
+        },
+        {
+          "namequiz": "Lập trình Android cơ bản",
+          "score": 3,
+          "date": "2021-04-23T09:02:18.827Z"
+        }
+      ]
+    },
+    {
+      "id": 0.15393548220469366,
+      "username": "lamlt",
+      "inforQuizs": [
+        {
+          "namequiz": "Lập trình Android cơ bản",
+          "score": 3,
+          "date": "2022-03-03T02:13:29.113Z"
+        }
+      ]
+    },
+    {
+      "id": 0.09743437759621343,
+      "username": "lam171",
+      "inforQuizs": [
+        {
+          "namequiz": "Điện toán đám mây",
+          "score": 2,
+          "date": "2022-03-03T03:08:15.664Z"
+        },
+        {
+          "namequiz": "Điện toán đám mây",
+          "score": 2,
+          "date": "2022-03-03T03:07:20.608Z"
+        }
+      ]
+    }
+  ]
+}

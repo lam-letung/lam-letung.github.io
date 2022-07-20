@@ -1,0 +1,131 @@
+main id="main">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <section class="breadcrumbs">
+      <div class="container">
+
+        <div class="d-flex justify-content-between align-items-center">
+          <h2>Thông tin người dùng</h2>
+          <ol>
+            <li><a href="index.html">Trang chủ</a></li>
+            <li>Thông tin người dùng</li>
+          </ol>
+        </div>
+
+      </div>
+    </section><!-- End Breadcrumbs -->
+
+    <section class="inner-page" >
+      <div class="container">
+        <div class="container emp-profile">
+          <form ng-controller="edit-profile">
+              <div class="row">
+                  <div class="col-md-4">
+                      <div class="profile-img">
+                          <img src="./images/LogoFPT-2017-copy-3042-1513928399.jpg" alt=""/>
+                      </div>
+                  </div>
+                  <div class="col-md-6">
+                      <div class="profile-head">
+                                  <h5>
+                                      {{infors.fullname}}
+                                  </h5>
+                                  <h6 style="color: #666;">
+                                      Web Developer and Designer
+                                  </h6>
+                                  <!-- <p class="proile-rating">RANKINGS : <span>8/10</span></p> -->
+                          <ul class="nav nav-tabs pt-5" id="myTab" role="tablist">
+                              <li class="nav-item" ng-class="{active: isSet(1) }">
+                                  <a class="nav-link active" ng-click="setTab(1)" id="home-tab" data-toggle="tab" role="tab" aria-controls="home" aria-selected="true">Thông tin</a>
+                              </li>
+                              <li class="nav-item" ng-class="{active: isSet(2) }">
+                                  <a class="nav-link" ng-click="setTab(2)" id="profile-tab" data-toggle="tab"  role="tab" aria-controls="profile" aria-selected="false">Lịch sử học</a>
+                              </li>
+                          </ul>
+                      </div>
+                  </div>
+                  <div class="col-md-2">
+                      <a href="#!/edit-profile"  style="color: #666;">Chỉnh sửa thông tin</a>
+                  </div>
+              </div>
+              <div class="row">
+                  <div class="col-md-4">
+                     
+                  </div>
+                  <div class="col-md-8">
+                      <div class="tab-content profile-tab" id="myTabContent">
+                        <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                          <div  ng-show="isSet(1)">
+                            <div class="row">
+                              <div class="col-md-6" >
+                                  <label style="color: #666;">Username</label>
+                              </div>
+                              <div class="col-md-6">
+                                  <p style="color: #666;">{{infors.username}}</p>
+                              </div>
+                          </div>
+                          <div class="row">
+                              <div class="col-md-6">
+                                  <label>Họ và tên</label>
+                              </div>
+                              <div class="col-md-6">
+                                  <p  style="color: #666;" >{{infors.fullname}}</p>
+                              </div>
+                          </div>
+                          <div class="row">
+                              <div class="col-md-6">
+                                  <label>Email</label>
+                              </div>
+                              <div class="col-md-6">
+                                  <p  style="color: #666;" >{{infors.email}}</p>
+                              </div>
+                          </div>
+                          <div class="row">
+                              <div class="col-md-6">
+                                  <label>Giới tính</label>
+                              </div>
+                              <div ng-switch="infors.gender" class="col-md-6">
+                                  <p  style="color: #666;" ng-switch-when="true">Nam</p>
+                                  <p  style="color: #666;" ng-switch-default>Nữ</p>
+                              </div>
+                          </div>
+                          <div class="row">
+                              <div class="col-md-6">
+                                  <label>Ngày sinh</label>
+                              </div>
+                              <div class="col-md-6">
+                                  <p  style="color: #666;" >{{infors.birthday | date: 'dd/MM/yyyy'}}</p>
+                              </div>
+                          </div>
+                          </div>
+                          </div>
+                          <div  ng-show="isSet(2)">
+                            <div class="row" ng-repeat="i in quizs.inforQuizs">
+                              <div class="col-md-12">
+                                  <div class="row" >
+                                      <div class="col-sm-6" >
+                                       </h5>
+                                        <label for="">{{i.namequiz}}</label>
+                                      </div>
+                                      <div class="col-sm-2">
+                                        <p  style="color: #666;" >{{i.score}}</p>
+                                      </div>
+                                      <div class="col-sm-4">
+                                        <p  style="color: #666;" >{{i.date | date: 'dd/MM/yyyy'}}</p>
+                                      </div>
+                                  </div>
+                              </div>
+                        </div>
+                          </div>
+                  </div>
+              </div>
+          </form>           
+      </div>
+      </div>
+    </section>
+
+  </main><!-- End #main -->
+  
+
+  <!-- ======= Footer ======= -->
+  
